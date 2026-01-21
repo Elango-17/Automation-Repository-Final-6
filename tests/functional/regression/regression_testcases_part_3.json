@@ -1,0 +1,112 @@
+{
+  "root": "tests/functional",
+  "category": "regression",
+  "part": 3,
+  "total_parts": 4,
+  "count": 10,
+  "testcases": [
+    {
+      "id": 21,
+      "name": "Verify user can import items from file",
+      "steps": [
+        "Login as valid user",
+        "Navigate to import section",
+        "Upload valid import file",
+        "Submit import"
+      ],
+      "expected_result": "Items from file are added to the list"
+    },
+    {
+      "id": 22,
+      "name": "Verify import fails with invalid file format",
+      "steps": [
+        "Login as valid user",
+        "Navigate to import section",
+        "Upload invalid file",
+        "Submit import"
+      ],
+      "expected_result": "Error message is displayed and no items are imported"
+    },
+    {
+      "id": 23,
+      "name": "Verify user can log out successfully",
+      "steps": [
+        "Login as valid user",
+        "Click logout button"
+      ],
+      "expected_result": "User is logged out and redirected to login page"
+    },
+    {
+      "id": 24,
+      "name": "Verify session timeout logs out user",
+      "steps": [
+        "Login as valid user",
+        "Remain inactive until session timeout"
+      ],
+      "expected_result": "User is logged out and must log in again"
+    },
+    {
+      "id": 25,
+      "name": "Verify user can reset password",
+      "steps": [
+        "Navigate to login page",
+        "Click 'Forgot Password'",
+        "Enter registered email",
+        "Follow reset instructions"
+      ],
+      "expected_result": "Password is reset and user can log in with new password"
+    },
+    {
+      "id": 26,
+      "name": "Verify password reset fails for unregistered email",
+      "steps": [
+        "Navigate to login page",
+        "Click 'Forgot Password'",
+        "Enter unregistered email",
+        "Submit"
+      ],
+      "expected_result": "Error message is displayed"
+    },
+    {
+      "id": 27,
+      "name": "Verify user can update profile information",
+      "steps": [
+        "Login as valid user",
+        "Navigate to profile settings",
+        "Update profile information",
+        "Save changes"
+      ],
+      "expected_result": "Profile information is updated"
+    },
+    {
+      "id": 28,
+      "name": "Verify profile update fails with invalid data",
+      "steps": [
+        "Login as valid user",
+        "Navigate to profile settings",
+        "Enter invalid data",
+        "Attempt to save changes"
+      ],
+      "expected_result": "Validation error is displayed and changes are not saved"
+    },
+    {
+      "id": 29,
+      "name": "Verify user receives notification for important updates",
+      "steps": [
+        "Login as valid user",
+        "Trigger an important update (e.g., item assigned)"
+      ],
+      "expected_result": "Notification is received"
+    },
+    {
+      "id": 30,
+      "name": "Verify user can dismiss notifications",
+      "steps": [
+        "Login as valid user",
+        "Receive a notification",
+        "Dismiss the notification"
+      ],
+      "expected_result": "Notification is removed"
+    }
+  ]
+}
