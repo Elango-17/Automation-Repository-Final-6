@@ -1,0 +1,116 @@
+{
+  "root": "tests/functional",
+  "category": "regression",
+  "part": 2,
+  "total_parts": 4,
+  "count": 10,
+  "testcases": [
+    {
+      "id": 11,
+      "name": "Verify user can edit an existing item",
+      "steps": [
+        "Login as valid user",
+        "Navigate to item list",
+        "Select an item to edit",
+        "Modify item details",
+        "Save changes"
+      ],
+      "expected_result": "Item details are updated successfully"
+    },
+    {
+      "id": 12,
+      "name": "Verify user cannot edit item with invalid data",
+      "steps": [
+        "Login as valid user",
+        "Navigate to item list",
+        "Select an item to edit",
+        "Enter invalid data",
+        "Attempt to save changes"
+      ],
+      "expected_result": "Validation error is displayed and changes are not saved"
+    },
+    {
+      "id": 13,
+      "name": "Verify user can delete an item",
+      "steps": [
+        "Login as valid user",
+        "Navigate to item list",
+        "Select an item to delete",
+        "Confirm deletion"
+      ],
+      "expected_result": "Item is removed from the list"
+    },
+    {
+      "id": 14,
+      "name": "Verify deleted item is not accessible",
+      "steps": [
+        "Delete an item",
+        "Attempt to access the deleted item by URL"
+      ],
+      "expected_result": "User receives an item not found error"
+    },
+    {
+      "id": 15,
+      "name": "Verify user can filter items by status",
+      "steps": [
+        "Login as valid user",
+        "Navigate to item list",
+        "Apply filter by status"
+      ],
+      "expected_result": "Only items matching the selected status are displayed"
+    },
+    {
+      "id": 16,
+      "name": "Verify pagination works for item list",
+      "steps": [
+        "Login as valid user",
+        "Navigate to item list with more than one page",
+        "Navigate to next page"
+      ],
+      "expected_result": "Next set of items is displayed"
+    },
+    {
+      "id": 17,
+      "name": "Verify user can view item details",
+      "steps": [
+        "Login as valid user",
+        "Navigate to item list",
+        "Select an item to view details"
+      ],
+      "expected_result": "Item details are displayed"
+    },
+    {
+      "id": 18,
+      "name": "Verify user cannot access another user's private item",
+      "steps": [
+        "Login as user A",
+        "Create a private item",
+        "Logout",
+        "Login as user B",
+        "Attempt to access user A's private item"
+      ],
+      "expected_result": "Access denied error is displayed"
+    },
+    {
+      "id": 19,
+      "name": "Verify search functionality returns correct results",
+      "steps": [
+        "Login as valid user",
+        "Navigate to item list",
+        "Enter search term",
+        "Submit search"
+      ],
+      "expected_result": "Items matching the search term are displayed"
+    },
+    {
+      "id": 20,
+      "name": "Verify user can export item list",
+      "steps": [
+        "Login as valid user",
+        "Navigate to item list",
+        "Click export button"
+      ],
+      "expected_result": "Item list is downloaded in the selected format"
+    }
+  ]
+}
