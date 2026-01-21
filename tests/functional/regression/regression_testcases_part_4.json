@@ -1,0 +1,97 @@
+{
+  "root": "tests/functional",
+  "category": "regression",
+  "part": 4,
+  "total_parts": 4,
+  "count": 9,
+  "testcases": [
+    {
+      "id": 31,
+      "name": "Verify user can access help documentation",
+      "steps": [
+        "Login as valid user",
+        "Navigate to help section"
+      ],
+      "expected_result": "Help documentation is displayed"
+    },
+    {
+      "id": 32,
+      "name": "Verify user can change language settings",
+      "steps": [
+        "Login as valid user",
+        "Navigate to settings",
+        "Change language"
+      ],
+      "expected_result": "UI language is updated"
+    },
+    {
+      "id": 33,
+      "name": "Verify user can enable dark mode",
+      "steps": [
+        "Login as valid user",
+        "Navigate to settings",
+        "Enable dark mode"
+      ],
+      "expected_result": "UI theme is changed to dark mode"
+    },
+    {
+      "id": 34,
+      "name": "Verify user can disable dark mode",
+      "steps": [
+        "Login as valid user",
+        "Navigate to settings",
+        "Disable dark mode"
+      ],
+      "expected_result": "UI theme is changed to light mode"
+    },
+    {
+      "id": 35,
+      "name": "Verify user can view audit log",
+      "steps": [
+        "Login as admin user",
+        "Navigate to audit log section"
+      ],
+      "expected_result": "Audit log is displayed"
+    },
+    {
+      "id": 36,
+      "name": "Verify audit log records user actions",
+      "steps": [
+        "Login as user",
+        "Perform an action (e.g., create item)",
+        "Login as admin",
+        "Check audit log"
+      ],
+      "expected_result": "User action is recorded in the audit log"
+    },
+    {
+      "id": 37,
+      "name": "Verify user can generate API key",
+      "steps": [
+        "Login as valid user",
+        "Navigate to API settings",
+        "Generate new API key"
+      ],
+      "expected_result": "New API key is generated and displayed"
+    },
+    {
+      "id": 38,
+      "name": "Verify user can revoke API key",
+      "steps": [
+        "Login as valid user",
+        "Navigate to API settings",
+        "Revoke an existing API key"
+      ],
+      "expected_result": "API key is revoked and can no longer be used"
+    },
+    {
+      "id": 39,
+      "name": "Verify API access with valid key",
+      "steps": [
+        "Generate an API key",
+        "Make an API request with the key"
+      ],
+      "expected_result": "API request is successful"
+    }
+  ]
+}
